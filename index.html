@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://www.deliver.media/_next/static/media/dm_logo.87452757.svg" alt="Product Logo">
+        </div>
+        <form id="sign-in-form" onsubmit="return validateForm()">
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">&#x1f441;</span>
+                </div>
+                <div id="password-error" class="error"></div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <div class="form-group">
+                <label for="remember-me" class="checkbox-label">
+                    <input type="checkbox" id="remember-me" name="remember-me"> Remember Me
+                </label>
+                <input type="submit" value="Sign In">
+            </div>
+        </form>
+        <div class="legal-links">
+            <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
